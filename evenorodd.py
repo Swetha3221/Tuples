@@ -8,11 +8,30 @@ Odd
 '''
 '''
 Ans:
-a=map(int(input().split())
-b=count(a)
-if b%2==0:
-print("Even")
+# Input: a string of space-separated numbers
+input_numbers = input("Enter numbers: ")
+
+# Split the input string into individual numbers and convert them to integers
+numbers = list(map(int, input_numbers.split()))
+
+# Initialize counts for even and odd numbers
+even_count = 0
+odd_count = 0
+
+# Loop through each number to check if it's even or odd
+for number in numbers:
+    if number % 2 == 0:
+        even_count += 1  # Increment even count
+    else:
+        odd_count += 1   # Increment odd count
+
+# Determine which count is greater or if they are equal
+if even_count > odd_count:
+    print("Even")
+elif odd_count > even_count:
+    print("Odd")
 else:
-print("Odd")
+    print("Equal")
+
 '''
 '''
